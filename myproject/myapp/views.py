@@ -1,4 +1,3 @@
-# device/views.py
 from django.shortcuts import render
 from django.http import JsonResponse
 import json
@@ -84,7 +83,7 @@ def device_status(request):
     # 获取最新的数据记录
     latest_device_data = DeviceData.objects.latest('timestamp')
 
-    return render(request, 'device/device_status.html', {
+    return render(request, 'myapp/device_status.html', {
         'temperature': latest_device_data.temperature,
         'humidity': latest_device_data.humidity,
         'led_status': latest_device_data.led_status,

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Device Status</title>
+</head>
+
+<body>
+    <h1>设备状态</h1>
+    <p>温度: {{ temperature }} °C</p>
+    <p>湿度: {{ humidity }} %</p>
+    <p>LED状态: {{ led_status }}</p>
+    <p>{{ latest_update_message }}</p>
+    <p>刷新页面以查看最新设备状态</p>
+    <a href="{% url 'control_led' 'true' %}">打开LED</a>
+    <a href="{% url 'control_led' 'false' %}">关闭LED</a>
+    <!-- 现在不知道led的状态是不是被改变，待测试 -->
+    <a href="{% url 'latest_data' %}">查看最新100条数据</a>
+    <p>如果数据不足100条则显示所有数据</p>
+</body>
+
+</html>
