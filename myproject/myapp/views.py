@@ -69,7 +69,7 @@ def get_device_status():
 
 #     return JsonResponse({'error': 'Invalid request'}, status=400)
 
-from device.management.commands.fetch_device_data import Command
+from myapp.management.commands.fetch_device_data import Command
 def device_status(request):
     # 获取并更新最新的设备数据
 
