@@ -89,8 +89,7 @@ def device_status(request):
         'led_status': latest_device_data.led_status,
         'latest_update_message': "最新一次更新时间：" + latest_device_data.timestamp.strftime("%Y-%m-%d %H:%M:%S")
     })
-    # 使用 Django 的 render 函数来渲染 device/device_status.html 模板，并传递获取的最新数据。
-
+    # 使用 Django 的 render 函数来渲染 device_status.html 模板，并传递获取的最新数据。
 def control_led(request, state):
     url = "https://iot-api.heclouds.com/thingmodel/set-device-property"
     headers = {

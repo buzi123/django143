@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>数据历史</title>
+</head>
+
+<body>
+    <h1>数据历史</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>温度</th>
+            <th>湿度</th>
+            <th>LED状态</th>
+            <th>时间戳</th>
+        </tr>
+        {% for data in latest_data %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.temperature }}</td>
+            <td>{{ data.humidity }}</td>
+            <td>{{ data.led_status }}</td>
+            <td>{{ data.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
